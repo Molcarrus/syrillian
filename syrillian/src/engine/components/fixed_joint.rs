@@ -1,27 +1,9 @@
 use log::warn;
-use nalgebra::{
-    Isometry3, 
-    Point3
-};
-use rapier3d::prelude::{
-    FixedJoint, 
-    FixedJointBuilder, 
-    ImpulseJointHandle
-};
-use snafu::{
-    Snafu, 
-    ensure
-};
+use nalgebra::{Isometry3, Point3};
+use rapier3d::prelude::{FixedJoint, FixedJointBuilder, ImpulseJointHandle};
+use snafu::{Snafu, ensure};
 
-use crate::{
-    World, 
-    components::{
-        Component, 
-        NewComponent, 
-        RigidBodyComponent
-    }, 
-    core::GameObjectId
-};
+use crate::{World, components::{Component, NewComponent, RigidBodyComponent}, core::GameObjectId};
 
 #[derive(Debug, Snafu)]
 #[snafu(context(suffix(Err)))]
