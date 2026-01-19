@@ -483,7 +483,7 @@ fn revolute_joint_limit_ratio() {
     let ratio = joint.limit_ratio();
     assert!(ratio.is_some());
     let r = ratio.unwrap();
-    assert!(r >= 0.0 && r <= 1.0);
+    assert!((0.0..=1.0).contains(&r));
 }
 
 #[test]
